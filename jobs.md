@@ -1,7 +1,7 @@
 ## Jobs
 
 ### Shortcut
-> k run name --restart=OnFailure creates a job
+> k run name --restart=OnFailure
 
 ### Deadline
 ```
@@ -22,4 +22,4 @@ job.spec.parallelism=3
 ## Cron Jobs
 
 ### Shorcut
-> k run name --restart=OnFailure --schedule="*/1 * * * *" creates a cron job
+> k run name --restart=OnFailure --schedule="*/1 * * * *" 
