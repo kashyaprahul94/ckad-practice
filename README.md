@@ -1,2 +1,3 @@
-# ckad-practice
+# CKAD practice
+
 CKAD exercises for practice
