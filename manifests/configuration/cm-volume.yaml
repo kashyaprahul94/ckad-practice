@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  var8: val8
+  var9: val9
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: cmvolume
+  selfLink: /api/v1/namespaces/default/configmaps/cmvolume
