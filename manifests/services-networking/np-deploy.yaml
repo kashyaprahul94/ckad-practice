@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    access: "true"
+  name: nginx
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    access: "true"
+status:
+  loadBalancer: {}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    access: "true"
+  name: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      access: "true"
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        access: "true"
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
